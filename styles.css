@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@400;500&display=swap');
+
+*{
+ font-family: poppins;
+ font-weight: 400;
+ margin: 0;
+ padding: 0;
+ /* border: 1px solid purple; */
+}
+
+body, main{
+ display: flex;
+ flex-direction: column;
+ background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+}
+
+h1, main{
+ margin: auto;
+}
+
+#header{
+ font-size: 50px;
+ margin: 50px auto;
+}
+
+#grid{
+ width: 500px;
+ height: 500px;
+ display: grid;
+ /* grid-template-rows: repeat(25, auto);
+ grid-template-columns: repeat(25, auto); */
+ margin: 20px;
+ /* display: flex;
+ flex-direction: row; */
+}
+.block{
+ display: block;
+ border: none;
+ width: auto;
+ height: auto;
+ background-color: #252422;
+ margin: 0px;
+}
