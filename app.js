@@ -1,4 +1,5 @@
 const grid = document.querySelector('#grid')
+
 let main = window.getComputedStyle(document.documentElement, null).getPropertyValue('--main')
 const pen = main
 const background = '#e9ecef'
@@ -14,9 +15,16 @@ function createGrid(side) {
   div.className = `block block-${i}`
   document.querySelector('#grid').appendChild(div)
  }
-
  setBackground(background)
-
+ 
+ if (!!document.querySelector('h6') == true) {
+  document.querySelector('h6').remove()
+ } 
+ const h6 = document.createElement('h6')  
+ h6.classname = 'dimensions'
+ h6.innerHTML = `${side} x ${side}`
+ 
+ document.querySelector('#grid-div').appendChild(h6)
 }
 
 function setPen(color) {
