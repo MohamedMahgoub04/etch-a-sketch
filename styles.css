@@ -5,7 +5,78 @@
  font-weight: 400;
  margin: 0;
  padding: 0;
+ border: none;
+ color: #343a40;
+ box-sizing: border-box;
  /* border: 1px solid purple; */
+}
+*:focus{
+ outline: none;
+}
+
+#modal{
+ display: none;
+ flex-direction: column;
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 1;
+ background-color: rgba(0, 0, 0, 0.6);
+}
+#modal-content{
+ /* display: none; */
+ /* flex-direction: column; */
+ /* align-items: center; */
+ /* justify-content: space-around; */
+ width: 30vw;
+ height: 20vh;
+ background-color: #ccc;
+ margin: auto;
+}
+form{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-around;
+ width: 100%;
+ height: 100%;
+}
+form div{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 4%;
+}
+form p{
+ font-size: 20px;
+}
+input{
+ margin-top: 10px;
+ width: 3vw;
+ height: 4vh;
+ text-align: center;
+ font-size: 20px;
+ /* padding: 0 10px; */
+}
+#submit{
+ transition: 0.1s;
+ border: 1px solid #252422;
+ background-color: transparent;
+ color: #252422;
+ padding: 10px 20px;
+ font-weight: 500;
+}
+#submit:hover{
+ /* border: 2px solid #eb5e28; */
+ transition: 0.3s;
+ background-color: #eb5e28
+ /* color: #eb5e28; */
+}
+
+#modal, #modal-content, input, form button, #buttons button{
+ border-radius: 5px;
 }
 
 body, main{
@@ -27,17 +98,44 @@ h1, main{
  width: 500px;
  height: 500px;
  display: grid;
- /* grid-template-rows: repeat(25, auto);
- grid-template-columns: repeat(25, auto); */
  margin: 20px;
- /* display: flex;
- flex-direction: row; */
+ border: 1px solid #343a40;
 }
 .block{
  display: block;
  border: none;
  width: auto;
  height: auto;
- background-color: #252422;
+ background-color: #e9ecef;
  margin: 0px;
+}
+
+#main-content{
+ display: flex;
+ flex-direction: row;
+}
+
+#buttons{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: 20px;
+ width: 10vw;
+ margin-right: 30px;
+}
+
+#buttons button{
+ transition: 0.1s;
+ font-size: 20px;
+ padding: 15px;
+ border: 1px solid #343a40;
+ background-color: transparent;
+}
+#buttons button:hover{
+ transition: 0.2s;
+ transform: scale(1.05);
+}
+
+button{
+ cursor: pointer;
 }
