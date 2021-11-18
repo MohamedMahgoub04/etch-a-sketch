@@ -1,5 +1,4 @@
 const grid = document.querySelector('#grid')
-// [background, hover]
 let main = window.getComputedStyle(document.documentElement, null).getPropertyValue('--main')
 const pen = main
 const background = '#e9ecef'
@@ -68,15 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
  document.querySelector('#change').onclick = () => {
   document.querySelector('#modal').style.display = 'flex'
   document.querySelector('form').onsubmit = () => {
-    // console.log(document.querySelector('#size').value)
+    console.log(document.querySelector('#size').value)
     
     document.querySelector('#grid').innerHTML = ''
     createGrid(document.querySelector('#size').value)
-    selectColor(defaultColor)
+    setPen(main)
+    // selectColor(defaultColor)
     document.querySelector('#modal').style.display = 'none'
     document.querySelector('#size').value = ''
 
-    // return false
     return false
   }
  }
