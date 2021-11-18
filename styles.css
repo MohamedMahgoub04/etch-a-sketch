@@ -1,3 +1,7 @@
+:root{
+ --main: #343a40
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@400;500&display=swap');
 
 *{
@@ -6,7 +10,7 @@
  margin: 0;
  padding: 0;
  border: none;
- color: #343a40;
+ color: var(--main);
  box-sizing: border-box;
  /* border: 1px solid purple; */
 }
@@ -99,7 +103,7 @@ h1, main{
  height: 500px;
  display: grid;
  margin: 20px;
- border: 1px solid #343a40;
+ border: 1px solid var(--main);
 }
 .block{
  display: block;
@@ -138,4 +142,17 @@ h1, main{
 
 button{
  cursor: pointer;
+}
+
+#color-div{
+ border: 1px solid red;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ padding: 10px;
+}
+#color{
+ /* border: 1px solid green; */
+ border-radius: 50%;
 }

@@ -1,6 +1,8 @@
 const grid = document.querySelector('#grid')
 // [background, hover]
-const defaultColor = ['#e9ecef', '#343a40']
+let main = window.getComputedStyle(document.documentElement, null).getPropertyValue('--main')
+const pen = main
+const background = '#e9ecef'
 
 function createGrid(side) {
  let blocks = side * side
@@ -11,63 +13,54 @@ function createGrid(side) {
   div.className = `block block-${i}`
   document.querySelector('#grid').appendChild(div)
  }
+ setBackground(background)
 }
 
-function selectColor(colors) {
+function setPen(color) {
  document.querySelectorAll('.block').forEach(x => {
-   
-    x.style.backgroundColor = colors[0]
-    x.onmouseover = () => {
-     x.style.backgroundColor = colors[1]
-    } 
-   
+  x.onmouseover = () => {
+   x.style.backgroundColor = color
+  } 
+ })
+}
+
+function setBackground(color) {
+  document.querySelectorAll('.block').forEach(x => {
+    x.style.backgroundColor = color
   })
+}
+
+function setDefaultPen() {
+ document.querySelector('#color').value = '#343a40'
+ setPen(document.querySelector('#color').value)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
- let defaultBool = true
- let monoChromeBool = false
 
  createGrid(20)
- selectColor(defaultColor)
-
- // Submit button
-//  document.querySelector('form').onsubmit = () => {
-//   document.querySelector('#modal').style.display = 'none'
-//   let dimension = document.querySelector('input').value
-//   console.log(dimension)
-//   createGrid(dimension)
+ setDefaultPen()
   
+ // Color picker
+ document.querySelector('#color').value
+ document.addEventListener('input', () => {
+  console.log(document.querySelector('#color').value)
+  let color = document.querySelector('#color').value
+  document.querySelectorAll('.block').forEach(x => {
+    x.onmouseover = () => {
+      x.style.backgroundColor = color
+    }
+  })
+ })
 
-//   return false
-//  }
-
- // Default button
+ // Default
  document.querySelector('#default').onclick = () => {
-  if (monoChromeBool) {
-   monoChromeBool = false
-  }
-  document.querySelectorAll('.block').forEach(x => {
-   selectColor(defaultBool, defaultColor)
-  })
-  defaultBool = true
- }
-
- // Monochrome button
- if (defaultBool) {
-  defaultBool = false
- }
- document.querySelector('#monochrome').onclick = () => {
-  document.querySelectorAll('.block').forEach(x => {
-   selectColor(monoChromeBool, monochromeColor)
-  })
-  monoChromeBool = true
+  setDefaultPen()
  }
 
  // Clear button
  document.querySelector('#clear').onclick = () => {
   document.querySelectorAll('.block').forEach(x => {
-   selectColor(defaultColor)
+   x.style.backgroundColor = background
   })
  }
 
@@ -83,15 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#modal').style.display = 'none'
     document.querySelector('#size').value = ''
 
-    // createGrid()
+    // return false
     return false
   }
  }
-
- // document.querySelectorAll('.block').forEach(x => {
- //  x.onmouseover = () => {
- //   x.style.backgroundColor = '#eb5e28'
- //  }
- // })
 
 })
