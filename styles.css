@@ -108,6 +108,7 @@ h1, main{
 .block{
  display: block;
  border: none;
+ border: 1px solid rgb(209, 209, 209, 0.6);
  width: auto;
  height: auto;
  background-color: #e9ecef;

@@ -84,6 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
    })
  }
 
+ // Grid lines
+ document.querySelector('#grid-lines').onclick = () => {
+   let toggle = false
+   document.querySelectorAll('.block').forEach(x => {
+    if ( x.style.border == 'none') {
+       x.style.border = '1px solid rgb(209, 209, 209, 0.6)'
+    } else {
+       x.style.border = 'none'
+    }
+   })
+ }
+
  // Clear button
  document.querySelector('#clear').onclick = () => {
   document.querySelectorAll('.block').forEach(x => {
