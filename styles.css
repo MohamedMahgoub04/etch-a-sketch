@@ -56,7 +56,7 @@ form div{
 form p, h6{
  font-size: 20px;
 }
-input{
+#size{
  margin-top: 10px;
  width: 3vw;
  height: 4vh;
@@ -99,8 +99,8 @@ h1, main{
 }
 
 #grid{
- width: 500px;
- height: 500px;
+ width: 30vw;
+ height: 30vw;
  display: grid;
  margin: 20px;
  border: 1px solid var(--main);
@@ -146,16 +146,20 @@ button{
 }
 
 #color-div{
- border: 1px solid red;
+ /* border: 1px solid red; */
+ font-size: 20px;
  display: flex;
  flex-direction: row;
  align-items: center;
  justify-content: center;
  padding: 10px;
+ gap: 15px;
 }
 #color{
  /* border: 1px solid green; */
  border-radius: 50%;
+ height: 40px;
+ width: 60px;
 }
 
 #grid-div{
