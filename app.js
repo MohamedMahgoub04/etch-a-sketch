@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.querySelector('#grid').innerHTML = ''
     createGrid(document.querySelector('#size').value)
-    setPen(main)
+    setPen(document.querySelector('#color').value)
     document.querySelector('#modal').style.display = 'none'
     document.querySelector('#size').value = ''
 
