@@ -25,6 +25,7 @@ function createGrid(side) {
  h6.innerHTML = `${side} x ${side}`
  
  document.querySelector('#grid-div').appendChild(h6)
+
 }
 
 function setPen(color) {
@@ -75,6 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
  }
 
  // Random
+ document.querySelector('#random').onclick = () => {
+   
+  let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16)
+  document.querySelector('#color').value = randomColor
+  setPen(document.querySelector('#color').value)
+
+ }
  // Eraser
  document.querySelector('#erase').onclick = () => {
    document.querySelectorAll('.block').forEach(x => {
