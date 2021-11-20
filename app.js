@@ -1,3 +1,5 @@
+// import html2canvas from 'html2canvas';
+// var html2canvas = require('html2canvas')
 const grid = document.querySelector('#grid')
 
 let main = window.getComputedStyle(document.documentElement, null).getPropertyValue('--main')
@@ -148,6 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
  // Change button
  document.querySelector('#change').onclick = () => {
   document.querySelector('#modal').style.display = 'flex'
+  document.querySelector('#exit').onclick = () => {
+    document.querySelector('#modal').style.display = 'none'
+    // return
+  }
   document.querySelector('form').onsubmit = () => {
     
     document.querySelector('#grid').innerHTML = ''
@@ -158,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     return false
   }
+  
  }
 
 })

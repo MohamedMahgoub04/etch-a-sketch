@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="styles.css">
- <link rel="icon" href="pixels.png">
- <script src="app.js"></script>
- <title>Etch-a-Sketch</title>
-</head>
-<body>
- <div id="modal">
-  <div id="modal-content">
-   <form>
-    <div>
-     <p>Please type in a dimension size:</p>
-     <input id="size" type="number" min="1" max="100">
-    </div>
-    <button id="submit" type="submit">Submit</button>
-   </form>
-  </div>
- </div>
- <main>
-  <h1 id="header">Etch-a-Sketch</h1>
-  <div id="main-content">
-   <div id="buttons">
-    <div id="color-div">
-     <label for="">Pen color</label>
-     <input type="color" name="" id="color">
-    </div>
-    <button class="trans" id="default">Default</button>
-    <button class="trans" id="random">Random</button>
-    <button id="erase">Eraser</button>
-    <button id="grid-lines">Grid lines</button>
-    <button class="trans" id="clear">Clear</button>
-    <button class="trans" id="change">Change size</button>
-   </div>
-   <div id="grid-div">
-    <div id="grid"></div>
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="pixels.png">
+  <script src="app.js"></script>
+  <title>Etch-a-Sketch</title>
+ </head>
+ <body>
+  <div id="modal">
+   <div id="modal-content">
+    
+    <form>
+     <img src="close.png" alt="ff" height="20px" id="exit">
+     <div>
+      <p>Please type in a dimension size:</p>
+      <input id="size" type="number" min="1" max="100">
+     </div>
+     <button id="submit" type="submit">Submit</button>
+     
+    </form>
    </div>
   </div>
- </main>
- <div id="github-div">
-  <p>MohamedMahgoub04</p>
-  <a href="https://github.com/MohamedMahgoub04" target="blank"><img id="github" src="github.png" alt="Github-logo"></a>
- </div>
-</body>
+  <main>
+   <h1 id="header">Etch-a-Sketch</h1>
+   <div id="main-content">
+    <div id="buttons">
+     <div id="color-div">
+      <label for="">Pen color</label>
+      <input type="color" name="" id="color">
+     </div>
+     <button class="trans" id="default">Default</button>
+     <button class="trans" id="random">Random</button>
+     <button id="erase">Eraser</button>
+     <button id="grid-lines">Grid lines</button>
+     <button class="trans" id="clear">Clear</button>
+     <button class="trans" id="change">Change size</button>
+    </div>
+    <div id="grid-div">
+     <div id="grid"></div>
+    </div>
+   </div>
+  </main>
+  <div id="github-div">
+   <p>MohamedMahgoub04</p>
+   <a href="https://github.com/MohamedMahgoub04" target="blank"><img id="github" src="github.png" alt="Github-logo"></a>
+  </div>
+
+ </body>
 </html>
